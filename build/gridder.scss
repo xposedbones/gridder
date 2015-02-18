@@ -1,7 +1,7 @@
 @import "_gridConfig.scss";
 @import "_helper.scss";
 
-[class*="col"]{
+[class*="#{$colPrefix}-"]{
     padding:0 $gutter;
     margin-bottom:($gutter * 2);
     float:left;
@@ -22,28 +22,33 @@
         // Grid
         @for $i from 1 through $nbCols{
             $percent: (($i) * 100 / $nbCols);
-            .col-#{$key}-#{$i}{
+            .#{$colPrefix}-#{$key}-#{$i}{
                 width: ($percent * 1%);
             }
-            .col-#{$key}-push-#{$i}{
+            .#{$colPrefix}-#{$key}-push-#{$i}{
                 left: ($percent * 1%);
             }
-            .col-#{$key}-pull-#{$i}{
+            .#{$colPrefix}-#{$key}-pull-#{$i}{
                 right: ($percent * 1%);
             }
-            .col-#{$key}-offset-#{$i}{
+            .#{$colPrefix}-#{$key}-offset-#{$i}{
                 margin-left: ($percent * 1%);
             }
             @if $i == 1{
-                .col-#{$key}-push-0{
+                .#{$colPrefix}-#{$key}-push-0{
                     left: auto;
                 }
-                .col-#{$key}-pull-0{
+                .#{$colPrefix}-#{$key}-pull-0{
                     right: auto;
                 }
-                .col-#{$key}-offset-0{
+                .#{$colPrefix}-#{$key}-offset-0{
                     margin-left:0;
                 }
+            }
+        }
+        @each $k,$v in $custom-cols{
+            .#{$colPrefix}-#{$key}-#{$k}{
+                width:$v;
             }
         }
     }

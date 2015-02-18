@@ -10,7 +10,7 @@ module.exports = function(grunt){
 		},
 		cssmin : {
             css:{
-                src: 'build/<%= pkg.name %>.css',
+                src: 'dist/<%= pkg.name %>.css',
                 dest: 'dist/<%= pkg.name %>.min.css'
             }
         },
