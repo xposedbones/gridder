@@ -1,0 +1,50 @@
+@import "_gridConfig.scss";
+@import "_helper.scss";
+
+[class*="col"]{
+    padding:0 $gutter;
+    margin-bottom:($gutter * 2);
+    float:left;
+    position: relative;
+    min-height: 1px;
+    
+}
+.container{
+    width:100%;
+    margin:auto;
+}
+@each $key,$value in $query{
+    @media all and (min-width:#{$value}px){
+        // Container
+        .container{
+            max-width:#{map-get($container,$key)};
+        }
+        // Grid
+        @for $i from 1 through $nbCols{
+            $percent: (($i) * 100 / $nbCols);
+            .col-#{$key}-#{$i}{
+                width: ($percent * 1%);
+            }
+            .col-#{$key}-push-#{$i}{
+                left: ($percent * 1%);
+            }
+            .col-#{$key}-pull-#{$i}{
+                right: ($percent * 1%);
+            }
+            .col-#{$key}-offset-#{$i}{
+                margin-left: ($percent * 1%);
+            }
+            @if $i == 1{
+                .col-#{$key}-push-0{
+                    left: auto;
+                }
+                .col-#{$key}-pull-0{
+                    right: auto;
+                }
+                .col-#{$key}-offset-0{
+                    margin-left:0;
+                }
+            }
+        }
+    }
+}
