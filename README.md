@@ -5,7 +5,7 @@ A lightweight (it ships at a huge 6kb) grid system inspired by bootstrap
 Link to the css (dist/gridder.min.css) and have fun!
 
 ## Demo
-I've put together a quick demo available [here](http://gridder.xposedbones.com)
+I've put together a quick demo available [here](http://gridder.xposedbones.com) and you can play with it [on codepen](http://codepen.io/xposedbones/pen/gbemeb)
 
 ##Customizing
 If you want to customize the breakpoints or other things, please check **build/_gridConfig.scss** to make some changes.
