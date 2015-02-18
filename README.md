@@ -1,5 +1,5 @@
 # gridder
-A lightweight grid system inspired by bootstrap 
+A lightweight (7kb) grid system inspired by bootstrap 
 
 ## Really quick usage
 Link to the css (dist/gridder.min.css) and have fun!
