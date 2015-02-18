@@ -8,17 +8,6 @@ module.exports = function(grunt){
 				}
 			}
 		},
-		// cssmin: {
-		// 	options: {
-		// 		shorthandCompacting: false,
-		// 		roundingPrecision: -1
-		// 	},
-		// 	target: {
-		// 		files: {
-		// 		  'build/<%= pkg.name %>.css': 'build/<%= pkg.name %>.min.css'
-		// 		}
-		// 	}
-		// },
 		cssmin : {
             css:{
                 src: 'build/<%= pkg.name %>.css',
