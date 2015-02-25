@@ -15,3 +15,5 @@ To generate a custom stylesheet, run ```npm install``` then ```grunt build``` an
 You can change the numbers of collums with the ```$nbCols``` variables. 
 
 You can add media queries by editing the ```$queries``` variables. It works as follows; Each entry creates a media query like this: ```@media all and (min-width:KEY)``` and every class that goes with that media query, like ```col-KEY-6```. If you need more media queries, just add them and the sass file will take care of everything.
+
+if you want to have a specific column and the 1/12 system doesn't cover it, you can simply add a key to the ```$customCols``` object and it will generate every class for your custom column. (I've put the class 5th as an example)
