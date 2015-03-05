@@ -1,0 +1,16 @@
+{
+  "name": "gridder",
+  "version": "1.0.0",
+  "main": "dist/gridder.min.css",
+  "ignore": [
+    ".sass-cache/",
+    ".sass-cache/*",
+    "node_modules/*",
+    "**/*.html",
+    "**/*.txt"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
