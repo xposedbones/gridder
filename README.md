@@ -1,8 +1,8 @@
 # gridder
 A lightweight (it ships at a huge 6kb) grid system inspired by bootstrap 
 
-## Really quick usage
-Link to the css (dist/gridder.min.css) and have fun!
+## Quick Installation
+use ```bower install gridder``` and link to the css (dist/gridder.min.css)
 
 ## Demo
 I've put together a quick demo available [here](http://gridder.xposedbones.com) and you can play with it [on codepen](http://codepen.io/xposedbones/pen/gbemeb)
