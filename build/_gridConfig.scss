@@ -9,6 +9,20 @@ $query:(
     dt: 1440, // Desktop
 );
 
+// Coming from bootstrap
+// $query:(
+// 	xs: 0,
+// 	sm: 768,
+// 	md: 992,
+// 	lg: 1200
+// );
+// $container:(
+// 	xs: 100%,
+// 	sm: 750px,
+// 	md: 970px,
+// 	lg: 1170px
+// )
+
 @function breakpoint($key){
 	@if not map-has-key($query, $key){
 		@warn "Breakpoint #{$key} not found.";
