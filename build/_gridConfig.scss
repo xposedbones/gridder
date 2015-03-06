@@ -1,19 +1,28 @@
 $nbCols:12;
-$gutter:10px;
-$colPrefix:"c";
+$gutter:20px;
+$containerGutter:$gutter;
+$colPrefix:"col";
 $query:(
     mb: 0, // Mobile
     tb: 640, // Tablet
     lt: 1024, // Laptop
     dt: 1440, // Desktop
 );
+
+@function breakpoint($key){
+	@if not map-has-key($query, $key){
+		@warn "Breakpoint #{$key} not found.";
+	}
+	@return #{map-get($query, $key)}px;
+}
+
 $custom-cols:(
 	5th: (100%/5)
 );
 $container:(
     mb: 100%, // Mobile
-    tb: 640px, // Tablet
+    tb: 980px, // Tablet
     lt: 1024px, // Laptop
-    dt: 1280px, // Desktop
+    dt: 1024px, // Desktop
 )
 

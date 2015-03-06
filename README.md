@@ -4,6 +4,10 @@ A lightweight (it ships at a huge 6kb) grid system inspired by bootstrap
 ## Quick Installation
 use ```bower install gridder``` and link to the css (dist/gridder.min.css)
 
+## What's new?
+You can now access Gridder's breakpoint in your sass stylesheet! Just include the _gridConfig.scss in your stylesheet and you're good to go!
+example: ```@media screen and (max-width:breakpoint(tb)){}``` will output ```@media screen and (max-width:640px){}```
+
 ## Demo
 I've put together a quick demo available [here](http://gridder.xposedbones.com) and you can play with it [on codepen](http://codepen.io/xposedbones/pen/gbemeb)
 
