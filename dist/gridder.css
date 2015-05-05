@@ -8,8 +8,8 @@
   box-sizing: border-box; }
 
 [class*="col-"] {
-  padding: 0 20px;
-  margin-bottom: 40px;
+  padding: 0 10px;
+  margin-bottom: 20px;
   float: left;
   position: relative;
   min-height: 1px; }
@@ -20,8 +20,8 @@
   padding: 0 20px; }
 
 .row {
-  margin-left: -20px;
-  margin-right: -20px; }
+  margin-left: -10px;
+  margin-right: -10px; }
 
 @media all and (min-width: 0px) {
   .container {
@@ -181,7 +181,16 @@
     margin-left: 100%; }
 
   .col-mb-5th {
-    width: 20%; } }
+    width: 20%; }
+
+  .col-mb-push-5th {
+    left: 20%; }
+
+  .col-mb-pull-5th {
+    right: 20%; }
+
+  .col-mb-offset-5th {
+    margin-left: 20%; } }
 @media all and (min-width: 640px) {
   .container {
     max-width: 980px; }
@@ -340,7 +349,16 @@
     margin-left: 100%; }
 
   .col-tb-5th {
-    width: 20%; } }
+    width: 20%; }
+
+  .col-tb-push-5th {
+    left: 20%; }
+
+  .col-tb-pull-5th {
+    right: 20%; }
+
+  .col-tb-offset-5th {
+    margin-left: 20%; } }
 @media all and (min-width: 1024px) {
   .container {
     max-width: 1024px; }
@@ -499,7 +517,16 @@
     margin-left: 100%; }
 
   .col-lt-5th {
-    width: 20%; } }
+    width: 20%; }
+
+  .col-lt-push-5th {
+    left: 20%; }
+
+  .col-lt-pull-5th {
+    right: 20%; }
+
+  .col-lt-offset-5th {
+    margin-left: 20%; } }
 @media all and (min-width: 1440px) {
   .container {
     max-width: 1024px; }
@@ -658,6 +685,15 @@
     margin-left: 100%; }
 
   .col-dt-5th {
-    width: 20%; } }
+    width: 20%; }
+
+  .col-dt-push-5th {
+    left: 20%; }
+
+  .col-dt-pull-5th {
+    right: 20%; }
+
+  .col-dt-offset-5th {
+    margin-left: 20%; } }
 
 /*# sourceMappingURL=gridder.css.map */
