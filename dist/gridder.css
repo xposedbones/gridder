@@ -12,7 +12,8 @@
   margin-bottom: 20px;
   float: left;
   position: relative;
-  min-height: 1px; }
+  min-height: 1px;
+  width: 100%; }
 
 .container {
   width: 100%;
