@@ -25,13 +25,6 @@ $query:(
 //  lg: 1170px
 // )
 
-@function breakpoint($key){
-    @if not map-has-key($query, $key){
-        @warn "Breakpoint #{$key} not found.";
-    }
-    @return map-get($query, $key);
-}
-
 $custom-cols:(
     5th: (100%/5)
 );
@@ -43,3 +36,36 @@ $container:(
     lt: 1280px, // Laptop
     dt: 1440px, // Desktop
 );
+
+// Helpers
+@function breakpoint($key){
+    @if not map-has-key($query, $key){
+        @warn "Breakpoint #{$key} not found.";
+    }
+    @return map-get($query, $key);
+}
+
+@mixin create-col($args){
+    padding:0 ($gutter / 2);
+    margin-bottom:$gutter;
+    float:left;
+    position: relative;
+    min-height: 1px;
+    width:100%;
+    @each $key, $value in $args{
+        @media all and (min-width:#{breakpoint($key)}px){
+            $percent: (($value) * 100 / $nbCols);
+            width: ($percent * 1%);
+        }
+    }
+}
+// Usage
+// $cols:(
+//     bmb:12,
+//     tb:6,
+//     lt:3,
+//     dt:4
+// );
+// .whatever{
+//     @include create-col($cols);
+// }
